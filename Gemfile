@@ -13,7 +13,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer',  platforms: :ruby
-gem 'mime-types', '2.4.3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -24,8 +23,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -41,3 +38,14 @@ gem 'spring',        group: :development
 
 gem 'validate_url', '~> 0.2.2'
 gem 'devise'
+
+#interesting entries below
+#eventually we want this running in dev mode, but not yet
+#gem 'spring',        group: :development
+
+#needed due to strange behavior in mime-types 2.4.1
+gem 'mime-types', '2.4.3'
+
+# needed for ec2 mysql deployment 
+gem 'mysql2'
+
